@@ -20,3 +20,8 @@ pom.xml.asc
 .hg/
 .env
 .env.development
+.clj-kondo/
+.cpchache/
+.lsp/
+
+
