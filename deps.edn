@@ -1,0 +1,13 @@
+{:paths ["src/main"]
+ :deps
+ {org.clojure/clojure {:mvn/version "1.12.0"}
+  ring/ring-core {:mvn/version "1.9.6"}
+  ring/ring-json {:mvn/version "0.5.1"}
+  ring/ring-jetty-adapter {:mvn/version "1.9.6"}
+  compojure/compojure {:mvn/version "1.7.1"}
+  lynxeyes/dotenv {:mvn/version "1.1.0"}
+  clj-http/clj-http {:mvn/version "3.13.0"}
+  cheshire/cheshire {:mvn/version "5.13.0"}
+  org.clojure/core.async {:mvn/version "1.6.673"}}
+ :aliases
+ {:run-server {:main-opts ["-m" "backend.core"]}}}
