@@ -2,6 +2,7 @@
   (:require [ring.adapter.jetty :as jetty]
             [ring.middleware.json :refer [wrap-json-response wrap-json-body]]
             [ring.util.response :refer [response]]
+            [ring.middleware.cors :refer [wrap-cors]]
             [compojure.core :refer :all]
             [compojure.route :as route]
             [dotenv :refer [env app-env]]
@@ -40,7 +41,9 @@
 (def app 
   (-> app-routes 
       wrap-json-body
-      wrap-json-response))
+      wrap-json-response
+      (wrap-cors :access-control-allow-origin #"http://localhost:8080"
+                 :access-control-allow-methods [:get :post])))
 
 ;;; start server in port 3000
 (defn -main [& args]

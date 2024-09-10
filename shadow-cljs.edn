@@ -4,6 +4,7 @@
 
  :dependencies
  [[reagent "1.2.0"]
+  [cljs-ajax "0.8.4"]
   [cider/cider-nrepl "0.24.0"]]
  :dev-http {8080 "public"}
  :builds
